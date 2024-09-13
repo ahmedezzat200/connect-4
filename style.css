@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(45deg, red, blue);
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: white;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    gap: 5px;
+    background-color: rgb(74, 74, 198);
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.cell {
+    width: 75px;
+    height: 75px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.column:hover .cell {
+    background-color: rgb(98, 136, 238);
+}
+
+#whosturn {
+    font-size: 1.5em;
+}
+
+/* Responsive design */
+@media (max-width: 700px) {
+    .cell {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media (max-width: 520px) {
+    .cell {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 420px) {
+    .cell {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+#playAgainBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    background-color: cornflowerblue;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#playAgainBtn:hover {
+    background-color: royalblue;
+}
